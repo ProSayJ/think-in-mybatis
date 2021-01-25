@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="LOG4J2"/>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+
+    <typeAliases>
+        <package name="prosayj.thinking.mybatis.simple.model"/>
+    </typeAliases>
+
+    <typeHandlers>
+        <typeHandler
+                javaType="prosayj.thinking.mybatis.simple.type.Enabled"
+                handler="prosayj.thinking.mybatis.simple.type.EnabledTypeHandler"/>
+    </typeHandlers>
+
+    <plugins>
+        <plugin interceptor="prosayj.thinking.mybatis.simple.plugin.PageInterceptor">
+            <property name="dialect" value="prosayj.thinking.mybatis.simple.plugin.MySqlDialect"/>
+        </plugin>
+        <!-- <plugin interceptor="tk.mybatis.simple.plugin.CameHumpInterceptor"/> -->
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC">
+                <property name="" value=""/>
+            </transactionManager>
+            <dataSource type="UNPOOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <package name="prosayj.thinking.mybatis.simple.mapper"/>
+    </mappers>
+
+
+</configuration>
