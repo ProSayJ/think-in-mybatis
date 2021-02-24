@@ -3,11 +3,10 @@ package prosayj.thinking.mybatis.simple.mapper;
 import java.util.List;
 
 import org.apache.ibatis.session.RowBounds;
-import org.apache.ibatis.session.SqlSession;
 
 import org.junit.jupiter.api.Test;
-import prosayj.thinking.mybatis.simple.base.ExecuteInterface;
-import prosayj.thinking.mybatis.simple.base.MybatisEnvInit;
+import prosayj.thinking.mybatis.simple.support.ExecuteInterface;
+import prosayj.thinking.mybatis.simple.support.MybatisEnvInit;
 import prosayj.thinking.mybatis.simple.model.SysPrivilege;
 import prosayj.thinking.mybatis.simple.plugin.PageRowBounds;
 

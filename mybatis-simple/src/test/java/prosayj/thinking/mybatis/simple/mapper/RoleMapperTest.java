@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.apache.ibatis.session.RowBounds;
 import org.junit.jupiter.api.Test;
-import prosayj.thinking.mybatis.simple.base.ExecuteInterface;
-import prosayj.thinking.mybatis.simple.base.MybatisEnvInit;
+import prosayj.thinking.mybatis.simple.support.ExecuteInterface;
+import prosayj.thinking.mybatis.simple.support.MybatisEnvInit;
 import prosayj.thinking.mybatis.simple.model.SysPrivilege;
 import prosayj.thinking.mybatis.simple.model.SysRole;
 import prosayj.thinking.mybatis.simple.plugin.PageRowBounds;
@@ -26,7 +26,7 @@ public class RoleMapperTest extends MybatisEnvInit {
             //获取 RoleMapper 接口
             RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
             //调用 selectById 方法，查询 id = 1 的角色
-            SysRole role = roleMapper.selectById(1l);
+            SysRole role = roleMapper.selectById(1L);
             //role 不为空
             assertNotNull(role);
             //roleName = 管理员

@@ -8,8 +8,8 @@ import java.util.Map;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import prosayj.thinking.mybatis.simple.base.ExecuteInterface;
-import prosayj.thinking.mybatis.simple.base.MybatisEnvInit;
+import prosayj.thinking.mybatis.simple.support.ExecuteInterface;
+import prosayj.thinking.mybatis.simple.support.MybatisEnvInit;
 import prosayj.thinking.mybatis.simple.model.SysPrivilege;
 import prosayj.thinking.mybatis.simple.model.SysRole;
 import prosayj.thinking.mybatis.simple.model.SysUser;

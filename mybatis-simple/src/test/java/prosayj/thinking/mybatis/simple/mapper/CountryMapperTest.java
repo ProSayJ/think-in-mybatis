@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import prosayj.thinking.mybatis.simple.base.ExecuteInterface;
-import prosayj.thinking.mybatis.simple.base.MybatisEnvInit;
+import prosayj.thinking.mybatis.simple.support.ExecuteInterface;
+import prosayj.thinking.mybatis.simple.support.MybatisEnvInit;
 import prosayj.thinking.mybatis.simple.model.Country;
 import prosayj.thinking.mybatis.simple.model.CountryExample;
 
