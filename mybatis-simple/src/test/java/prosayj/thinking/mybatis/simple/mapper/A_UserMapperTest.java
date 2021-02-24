@@ -32,7 +32,7 @@ public class A_UserMapperTest extends MybatisEnvInit {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
             //创建一个 user 对象
             SysUser user = new SysUser();
-            user.setUserName("test1");
+            user.setUserName("test111");
             user.setUserPassword("123456");
             user.setUserEmail("test@mybatis.tk");
             user.setUserInfo("test info");
@@ -45,7 +45,7 @@ public class A_UserMapperTest extends MybatisEnvInit {
             //id 为 null，我们没有给 id 赋值，并且没有配置回写 id 的值
             assertNull(user.getId());
             //为了不影响数据库中的数据导致其他测试失败，这里选择回滚.
-        }).doExecuteSql(sqlSession, true);
+        }).doExecuteSql(sqlSession, false);
     }
 
     @Test

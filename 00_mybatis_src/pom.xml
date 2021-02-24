@@ -22,16 +22,15 @@
 
     <parent>
         <groupId>org.mybatis</groupId>
-        <artifactId>mybatis-parent</artifactId>
+        <artifactId>00_mybatis_parent</artifactId>
         <version>31</version>
         <relativePath/>
     </parent>
-
-    <artifactId>mybatis</artifactId>
+    <artifactId>00_mybatis_src</artifactId>
     <version>3.5.2-ProSayJ</version>
     <packaging>jar</packaging>
 
-    <name>mybatis-3.3.5-src</name>
+    <name>00_mybatis_src</name>
     <description>
         The MyBatis SQL mapper framework makes it easier to use a relational database with object-oriented
         applications. MyBatis couples objects with stored procedures or SQL statements using a XML descriptor or

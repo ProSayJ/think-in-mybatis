@@ -20,11 +20,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.mybatis</groupId>
-  <artifactId>mybatis-parent</artifactId>
+  <artifactId>00_mybatis_parent</artifactId>
   <version>31</version>
   <packaging>pom</packaging>
 
-  <name>mybatis-parent</name>
+  <name>00_mybatis_parent</name>
   <description>The MyBatis parent POM.</description>
   <url>http://www.mybatis.org/</url>
   <inceptionYear>2010</inceptionYear>
