@@ -34,7 +34,7 @@ public class DictController {
     /**
      * 新增或修改字典信息页面，使用 get 跳转到页面
      */
-    @RequestMapping(value = "add", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public ModelAndView add(Long id) {
         ModelAndView mv = new ModelAndView("dict_add");
         SysDict sysDict;
@@ -51,25 +51,25 @@ public class DictController {
 
     /**
      * 新增或修改字典信息，通过表单 post 提交数据
-     *
-     * @RequestMapping(value = "add", method = RequestMethod.POST)
-     * public ModelAndView save(SysDict sysDict) {
-     * ModelAndView mv = new ModelAndView();
-     * try {
-     * dictService.saveOrUpdate(sysDict);
-     * mv.setViewName("redirect:/dicts");
-     * } catch (Exception e) {
-     * mv.setViewName("dict_add");
-     * mv.addObject("msg", e.getMessage());
-     * mv.addObject("model", sysDict);
-     * }
-     * return mv;
-     * }
-     * <p>
-     * /**
+     */
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public ModelAndView save(SysDict sysDict) {
+        ModelAndView mv = new ModelAndView();
+        try {
+            dictService.saveOrUpdate(sysDict);
+            mv.setViewName("redirect:/dicts");
+        } catch (Exception e) {
+            mv.setViewName("dict_add");
+            mv.addObject("msg", e.getMessage());
+            mv.addObject("model", sysDict);
+        }
+        return mv;
+    }
+
+    /**
      * 通过 id 删除字典信息
      */
-    @RequestMapping(value = "delete", method = RequestMethod.POST)
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @ResponseBody
     public ModelMap delete(@RequestParam Long id) {
         ModelMap modelMap = new ModelMap();

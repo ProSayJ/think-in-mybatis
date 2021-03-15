@@ -81,7 +81,7 @@ public class SimpleTest {
                 config, "SELECT * FROM country WHERE id = ?");
 
         //由于上面的 SQL 有个参数 id，这里需要提供 ParameterMapping(参数映射)
-        List<ParameterMapping> parameterMappings = new ArrayList<ParameterMapping>();
+        List<ParameterMapping> parameterMappings = new ArrayList<>();
         //通过 ParameterMapping.Builder 创建 ParameterMapping
         parameterMappings.add(new ParameterMapping.Builder(
                 config, "id", registry.getTypeHandler(Long.class)).build());
@@ -144,7 +144,7 @@ public class SimpleTest {
         //创建代理接口
         SimpleMapper simpleMapper = mapperProxyFactory.newInstance(sqlSession);
         //执行方法
-        country = simpleMapper.selectCountry(3L);
+        country = simpleMapper.selectCountry(2L);
         System.out.println(country.getCountryname());
         //关闭
         sqlSession.close();
