@@ -89,7 +89,7 @@ public class SimpleTest {
                 config, "defaultParameterMap", Country.class, parameterMappings);
 
         //创建结果映射配置
-        @SuppressWarnings("serial")
+        //@SuppressWarnings("serial")
         ResultMap resultMap = new ResultMap.Builder(config, "defaultResultMap", Country.class,
                 new ArrayList<ResultMapping>() {
                     {
@@ -115,7 +115,7 @@ public class SimpleTest {
         MappedStatement.Builder msBuilder = new MappedStatement.Builder(
                 config, "prosayj.thinking.mybatis.simple.SimpleMapper.selectCountry", sqlSource, SqlCommandType.SELECT);
         msBuilder.parameterMap(paramBuilder.build());
-        List<ResultMap> resultMaps = new ArrayList<ResultMap>();
+        List<ResultMap> resultMaps = new ArrayList<>();
         resultMaps.add(resultMap);
         //设置返回值的 resultMap
         msBuilder.resultMaps(resultMaps);
@@ -140,7 +140,7 @@ public class SimpleTest {
         System.out.println(country.getCountryname());
 
         //第三种 接口方式，创建接口代理工厂类
-        MapperProxyFactory<SimpleMapper> mapperProxyFactory = new MapperProxyFactory<SimpleMapper>(SimpleMapper.class);
+        MapperProxyFactory<SimpleMapper> mapperProxyFactory = new MapperProxyFactory<>(SimpleMapper.class);
         //创建代理接口
         SimpleMapper simpleMapper = mapperProxyFactory.newInstance(sqlSession);
         //执行方法

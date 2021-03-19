@@ -13,9 +13,9 @@
     <artifactId>think-in-mybatis</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>mybatis-simple</module>
-        <module>mybatis-spring</module>
-        <module>mybatis-springboot</module>
+<!--        <module>mybatis-simple</module>-->
+<!--        <module>mybatis-spring</module>-->
+<!--        <module>mybatis-springboot</module>-->
     </modules>
 
 
