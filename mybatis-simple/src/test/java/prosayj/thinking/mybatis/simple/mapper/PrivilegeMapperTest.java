@@ -5,10 +5,6 @@ import java.util.List;
 import org.apache.ibatis.session.RowBounds;
 
 import org.junit.jupiter.api.Test;
-import prosayj.thinking.mybatis.simple.support.ExecuteInterface;
-import prosayj.thinking.mybatis.simple.support.MybatisEnvInit;
-import prosayj.thinking.mybatis.simple.model.SysPrivilege;
-import prosayj.thinking.mybatis.simple.plugin.PageRowBounds;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
