@@ -1,0 +1,14 @@
+<mapper namespace="UserMapper">
+
+
+    <select id="selectOne" parameterType="prosayj.mybatis.litetest.pojo.User" resultType="prosayj.mybatis.litetest.pojo.User">
+        select * from simpleuser where id = #{id} and username = #{username}
+    </select>
+
+
+    <select id="selectAll" resultType="prosayj.mybatis.litetest.pojo.User" parameterType="prosayj.mybatis.litetest.pojo.User">
+        select * from simpleuser
+    </select>
+
+
+</mapper>
