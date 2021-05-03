@@ -6,10 +6,9 @@ import java.io.IOException;
 import java.util.List;
 
 public interface UserDao {
-
-    public List<SimpleUser> findAll() throws IOException;
-    public void insertUser(SimpleUser user) throws IOException;
-    public void deleteUser(Integer id) throws IOException;
-    public void updateUser(SimpleUser user) throws IOException;
+    List<SimpleUser> findAll() throws IOException;
+    void insertUser(SimpleUser user) throws IOException;
+    void deleteUser(Integer id) throws IOException;
+    void updateUser(SimpleUser user) throws IOException;
 
 }

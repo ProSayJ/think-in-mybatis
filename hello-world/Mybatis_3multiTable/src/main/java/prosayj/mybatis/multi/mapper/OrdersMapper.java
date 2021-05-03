@@ -1,6 +1,6 @@
-package prosayj.mybatis.multi.mapper;
+package prosayj.mybatis.lite.mapper;
 
-import prosayj.mybatis.multi.pojo.Orders;
+import prosayj.mybatis.lite.pojo.Orders;
 
 import java.io.IOException;
 import java.util.List;

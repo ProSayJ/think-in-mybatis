@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="prosayj.mybatis.multi.mapper.OrdersMapper">
+<mapper namespace="prosayj.mybatis.lite.mapper.OrdersMapper">
 
     <resultMap id="ordersMap" type="prosayj.mybatis.multi.pojo.Orders">
 

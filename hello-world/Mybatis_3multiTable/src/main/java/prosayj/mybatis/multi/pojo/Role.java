@@ -1,4 +1,4 @@
-package prosayj.mybatis.multi.pojo;
+package prosayj.mybatis.lite.pojo;
 
 public class Role {
 

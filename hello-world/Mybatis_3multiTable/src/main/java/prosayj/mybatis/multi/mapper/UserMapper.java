@@ -1,6 +1,6 @@
-package prosayj.mybatis.multi.mapper;
+package prosayj.mybatis.lite.mapper;
 
-import prosayj.mybatis.multi.pojo.User;
+import prosayj.mybatis.lite.pojo.User;
 
 import java.util.List;
 

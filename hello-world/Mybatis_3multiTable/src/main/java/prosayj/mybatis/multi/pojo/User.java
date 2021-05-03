@@ -1,4 +1,4 @@
-package prosayj.mybatis.multi.pojo;
+package prosayj.mybatis.lite.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
