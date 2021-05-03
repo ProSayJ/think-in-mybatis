@@ -1,16 +1,16 @@
-package prosayj.mybatis.lite.test;
+package prosayj.mybatis.multi.test;
 
 
-import prosayj.mybatis.lite.mapper.OrdersMapper;
-import prosayj.mybatis.lite.mapper.UserMapper;
-import prosayj.mybatis.lite.pojo.Orders;
-import prosayj.mybatis.lite.pojo.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import prosayj.mybatis.multi.mapper.OrdersMapper;
+import prosayj.mybatis.multi.mapper.UserMapper;
+import prosayj.mybatis.multi.pojo.Orders;
+import prosayj.mybatis.multi.pojo.User;
 
 import java.io.IOException;
 import java.io.InputStream;

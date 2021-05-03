@@ -1,13 +1,14 @@
-package prosayj.mybatis.lite.mapper;
+package prosayj.mybatis.multi.mapper;
 
-import prosayj.mybatis.lite.pojo.User;
+
+import prosayj.mybatis.multi.pojo.User;
 
 import java.util.List;
 
 public interface UserMapper {
 
-    public List<User> findAll();
+    List<User> findAll();
 
-    public List<User> findAllUserAndRole();
+    List<User> findAllUserAndRole();
 
 }

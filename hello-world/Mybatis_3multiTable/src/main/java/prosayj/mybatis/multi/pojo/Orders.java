@@ -1,4 +1,5 @@
-package prosayj.mybatis.lite.pojo;
+package prosayj.mybatis.multi.pojo;
+
 
 import java.util.Date;
 
