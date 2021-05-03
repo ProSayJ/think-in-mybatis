@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <properties resource="jdbc.properties"/>
+
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <typeAlias type="prosayj.mybatis.plugin.pojo.User" alias="user"/>
+    </typeAliases>
+
+    <plugins>
+        <!--注意：分页助手的插件 配置在通用馆mapper之前 -->
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <!--指定方言 -->
+            <property name="dialect" value="mysql"/>
+        </plugin>
+
+        <plugin interceptor="prosayj.mybatis.plugin.plugin.MyPlugin">
+            <property name="name" value="Tom"/>
+        </plugin>
+
+        <!-- 通用mapper 的 插件 -->
+        <plugin interceptor="tk.mybatis.mapper.mapperhelper.MapperInterceptor">
+            <!-- 通用Mapper接口，多个通用接口用逗号隔开 -->
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+        </plugin>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <package name="prosayj.mybatis.plugin.mapper"/>
+        <!--        <mapper resource="UserMapper.xml"/>-->
+    </mappers>
+</configuration>
+
