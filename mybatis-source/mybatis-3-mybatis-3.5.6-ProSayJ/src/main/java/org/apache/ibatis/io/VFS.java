@@ -29,6 +29,9 @@ import org.apache.ibatis.logging.LogFactory;
 
 /**
  * Provides a very simple API for accessing resources within an application server.
+ * 1. VFS是虚拟文件系统通用API，不需关心什么存储媒介
+ * 2. 优先使用自定义实现VFS，最后使用 mybatis 内置的JBoss6VFS和DefaultVFS
+ * 3. 利用静态内部类VFSHolder实现单例，根据顺序自定义实现VFS> 内置原则，实例VFS
  *
  * @author Ben Gunter
  */
