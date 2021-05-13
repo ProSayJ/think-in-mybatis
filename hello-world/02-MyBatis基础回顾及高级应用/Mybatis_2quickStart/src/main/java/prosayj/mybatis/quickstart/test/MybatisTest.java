@@ -17,13 +17,12 @@ import java.io.InputStream;
 import java.util.List;
 
 public class MybatisTest {
-    private static InputStream inputStream = null;
     private static SqlSessionFactory build = null;
 
     @BeforeAll
-    public static void BeforeTest() throws IOException {
-        inputStream = Resources.getResourceAsStream("SqlMapConfig.xml");
-        build = new SqlSessionFactoryBuilder().build(inputStream);
+    public static void beforeTest() throws IOException {
+        build = new SqlSessionFactoryBuilder()
+                .build(Resources.getResourceAsStream("SqlMapConfig.xml"));
     }
 
 
