@@ -1,4 +1,4 @@
-package com.prosayj.pojo;
+package com.prosayj.mybatisquickstarter.pojo;
 
 import lombok.Data;
 

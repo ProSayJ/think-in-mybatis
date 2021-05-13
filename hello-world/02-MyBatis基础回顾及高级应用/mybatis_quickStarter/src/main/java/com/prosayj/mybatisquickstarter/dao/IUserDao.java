@@ -1,6 +1,6 @@
-package com.prosayj.dao;
+package com.prosayj.mybatisquickstarter.dao;
 
-import com.prosayj.pojo.SimpleUser;
+import com.prosayj.mybatisquickstarter.pojo.SimpleUser;
 
 import java.io.IOException;
 import java.util.List;
